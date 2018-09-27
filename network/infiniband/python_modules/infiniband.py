@@ -21,6 +21,7 @@
 # (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
 # THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
+# Delete error message
 
 import os
 import subprocess
@@ -543,7 +544,7 @@ def update_metrics():
             try:
                 counter_name_prefix = KNOWN_PERFQUERY_METRICS[counter_name]['name_prefix']
             except KeyError:
-                print("An unknown InfiniBand counter was returned by perfquery: '%s'" % counter_name)
+                #print("An unknown InfiniBand counter was returned by perfquery: '%s'" % counter_name)
                 continue
 
             try:
