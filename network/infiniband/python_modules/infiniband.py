@@ -22,6 +22,7 @@
 # THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
 # Delete error message
+# TODO speed unit auto adjust
 
 import os
 import subprocess
@@ -593,7 +594,7 @@ if __name__ == "__main__":
                 ))
 
         print('Current time: %s\n' % (
-                METRICS['time']
+            time.asctime(time.localtime(METRICS['time']))
             ))
 
         time.sleep(10)
